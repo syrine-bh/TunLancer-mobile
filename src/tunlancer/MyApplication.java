@@ -23,7 +23,7 @@ public class MyApplication {
 
     private Form current;
     private Resources theme;
-
+  
     public void init(Object context) {
         theme = UIManager.initFirstTheme("/theme");
 
