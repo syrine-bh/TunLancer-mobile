@@ -10,5 +10,7 @@ package tunlancer.utils;
  * @author Cyrina
  */
 public class Statics {
-    public static final String BASE_URL="http://localhost/tunlancer/public/index.php/";
+   // public static final String BASE_URL="http://localhost/tunlancer/public/index.php/";
+   // public static final String BASE_URL="http://51.89.167.87:51100";  
+     public static final String BASE_URL=" http://127.0.0.1:8000";
 }
