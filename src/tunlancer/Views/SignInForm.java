@@ -16,19 +16,28 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
-
 package tunlancer.Views;
 
 import com.codename1.components.FloatingHint;
+import com.codename1.components.ImageViewer;
 import com.codename1.ui.Button;
+import com.codename1.ui.Command;
+import static com.codename1.ui.Component.LEFT;
+import static com.codename1.ui.Component.RIGHT;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
+import com.codename1.ui.FontImage;
+import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.util.Resources;
+import java.io.IOException;
+
+import tunlancer.Services.UserServices;
 
 /**
  * Sign in UI
@@ -37,41 +46,74 @@ import com.codename1.ui.util.Resources;
  */
 public class SignInForm extends BaseForm {
 
+    UserServices us;
+
     public SignInForm(Resources res) {
+
         super(new BorderLayout());
-        
-        if(!Display.getInstance().isTablet()) {
-            BorderLayout bl = (BorderLayout)getLayout();
+
+        if (!Display.getInstance().isTablet()) {
+            BorderLayout bl = (BorderLayout) getLayout();
             bl.defineLandscapeSwap(BorderLayout.NORTH, BorderLayout.EAST);
             bl.defineLandscapeSwap(BorderLayout.SOUTH, BorderLayout.CENTER);
         }
         getTitleArea().setUIID("Container");
         setUIID("SignIn");
-        
+        this.us = UserServices.getInstance();
+
         add(BorderLayout.NORTH, new Label(res.getImage("Logo.png"), "LogoLabel"));
-        
-        TextField username = new TextField("", "Username", 20, TextField.ANY);
-        TextField password = new TextField("", "Password", 20, TextField.PASSWORD);
-        username.setSingleLineTextArea(false);
-        password.setSingleLineTextArea(false);
-        Button signIn = new Button("Sign In");
-        Button signUp = new Button("Sign Up");
-        signUp.addActionListener(e -> new SignUpForm(res).show());
-        signUp.setUIID("Link");
-        Label doneHaveAnAccount = new Label("Don't have an account?");
-        
-        Container content = BoxLayout.encloseY(
-                new FloatingHint(username),
-                createLineSeparator(),
-                new FloatingHint(password),
-                createLineSeparator(),
-                signIn,
-                FlowLayout.encloseCenter(doneHaveAnAccount, signUp)
+        getTitleArea().setUIID("Container");
+
+        TextField login = new TextField("", "Login", 15, TextField.EMAILADDR);
+        TextField password = new TextField("", "Password", 15, TextField.PASSWORD);
+        login.getAllStyles().setMargin(LEFT, 0);
+        password.getAllStyles().setMargin(LEFT, 0);
+        Label loginIcon = new Label("", "TextField");
+        Label passwordIcon = new Label("", "TextField");
+        loginIcon.getAllStyles().setMargin(RIGHT, 0);
+        passwordIcon.getAllStyles().setMargin(RIGHT, 0);
+        FontImage.setMaterialIcon(loginIcon, FontImage.MATERIAL_PERSON_OUTLINE, 3);
+        FontImage.setMaterialIcon(passwordIcon, FontImage.MATERIAL_LOCK_OUTLINE, 3);
+        Button loginButton = new Button("LOGIN");
+        loginButton.setUIID("LoginButton");
+        loginButton.addActionListener(e -> {
+            if ((login.getText().length() == 0) || (password.getText().length() == 0)) {
+                Dialog.show("Alert", "Please fill all fields", new Command("OK"));
+            } else {
+
+                if (us.loginAction(login.getText(), password.getText())) {
+                    new ProfileForm(res).show();//                } else {
+                }
+            }
+
+        });
+
+        Button createNewAccount = new Button("CREATE NEW ACCOUNT");
+        createNewAccount.setUIID("CreateNewAccountButton");
+        createNewAccount.addActionListener((e) -> {
+            new SignUpForm(res).show();
+
+        });
+
+        Label spaceLabel;
+        if (!Display.getInstance().isTablet() && Display.getInstance().getDeviceDensity() < Display.DENSITY_VERY_HIGH) {
+            spaceLabel = new Label();
+        } else {
+            spaceLabel = new Label(" ");
+        }
+
+        Container by = BoxLayout.encloseY(
+                spaceLabel,
+                BorderLayout.center(login).
+                        add(BorderLayout.WEST, loginIcon),
+                BorderLayout.center(password).
+                        add(BorderLayout.WEST, passwordIcon),
+                loginButton,
+                createNewAccount
         );
-        content.setScrollableY(true);
-        add(BorderLayout.SOUTH, content);
-        signIn.requestFocus();
-        signIn.addActionListener(e -> new PublicationsForm(res).show());
+        add(BorderLayout.CENTER, by);
+        by.setScrollableY(false);
+        by.setScrollVisible(false);
     }
-    
+
 }

@@ -16,7 +16,6 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
  */
-
 package tunlancer.Views;
 
 import com.codename1.components.ScaleImageLabel;
@@ -82,11 +81,11 @@ public class BaseForm extends Form {
                         new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
         
-        tb.addMaterialCommandToSideMenu("Publications", FontImage.MATERIAL_UPDATE, e -> new PublicationsForm(res).show());
-        tb.addMaterialCommandToSideMenu("Recrutement", FontImage.MATERIAL_UPDATE, e -> new PublicationsForm(res).show());
-        tb.addMaterialCommandToSideMenu("Offres", FontImage.MATERIAL_UPDATE, e -> new PublicationsForm(res).show());
-        tb.addMaterialCommandToSideMenu("Concours", FontImage.MATERIAL_UPDATE, e -> new PublicationsForm(res).show());
-        tb.addMaterialCommandToSideMenu("Forum", FontImage.MATERIAL_UPDATE, e -> new PublicationsForm(res).show());
+        tb.addMaterialCommandToSideMenu("Publications", FontImage.MATERIAL_UPDATE, e -> new ConcoursForm(res).show());
+        tb.addMaterialCommandToSideMenu("Recrutement", FontImage.MATERIAL_UPDATE, e -> new ConcoursForm(res).show());
+        tb.addMaterialCommandToSideMenu("Offres", FontImage.MATERIAL_UPDATE, e -> new ConcoursForm(res).show());
+        tb.addMaterialCommandToSideMenu("Concours", FontImage.MATERIAL_UPDATE, e -> new ConcoursForm(res).show());
+        tb.addMaterialCommandToSideMenu("Forum", FontImage.MATERIAL_UPDATE, e -> new ConcoursForm(res).show());
         tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_SETTINGS, e -> new ProfileForm(res).show());
         
         tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());

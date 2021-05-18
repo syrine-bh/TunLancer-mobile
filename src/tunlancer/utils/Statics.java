@@ -7,8 +7,8 @@ package tunlancer.utils;
 
 /**
  *
- * @author Cyrina
+ * @author Anis
  */
 public class Statics {
-    public static final String BASE_URL="http://localhost/tunlancer/public/index.php/";
+    public static final String BASE_URL="http://127.0.0.1:8000";
 }
