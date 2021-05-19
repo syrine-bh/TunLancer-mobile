@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a21c3d4-d33c-4e67-9117-03af6912bf15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Versions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Versions.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/tunlancer/Views/PublicationsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/tunlancer/Views/PublicationsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/tunlancer/utils/Statics.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/tunlancer/utils/Statics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/tunlancer/Views/PublicationsForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/tunlancer/Views/PublicationsForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/tunlancer/utils/Statics.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/tunlancer/utils/Statics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codenameone_settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_settings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tunlancer-mobile.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tunlancer-mobile.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/theme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tunlancer/Views/PublicationsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tunlancer/Views/PublicationsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tunlancer/utils/Statics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tunlancer/utils/Statics.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sAe2SXhG4i6818kBJLBGjpzSXN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run in Device Simulator" type="#com.codename1.plugin.intellij.run.CodenameOneConfigurationType" factoryName="Codename One" temporary="true">
+      <setting name="mainClass" value="tunlancer.MyApplication" />
+      <setting name="vmparams" value="" />
+      <setting name="workDir" value="" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Codename One.Run in Device Simulator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a21c3d4-d33c-4e67-9117-03af6912bf15" name="Default Changelist" comment="" />
+      <created>1620319613749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620319613749</updated>
+    </task>
+    <servers />
+  </component>
+</project>
