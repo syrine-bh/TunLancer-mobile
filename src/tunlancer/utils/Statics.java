@@ -9,6 +9,9 @@ package tunlancer.utils;
  *
  * @author Cyrina
  */
-public class Statics {
+public class Statics  {
+  
     public static final String BASE_URL="http://localhost/tunlancer/public/index.php/";
+    public static final String BASE_IMG_URL="http://localhost/TunLancer/public/images/";
+    public static final String BASE_UPLOAD_URL="C:/wamp64/www/TunLancer/public/images/publications/"; 
 }
